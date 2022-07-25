@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'rest_framework',
     'tela',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -80,18 +82,14 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ],
     # classe que defini apenas como vai ser renderizado o rest_framework sem form
-    'DEFAULT_RENDER_CLASSES': [
+    'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-    ],
-    # configuração default de entrada
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser'
     ]
 }
 
 WSGI_APPLICATION = 'app.wsgi.application'
+
+ASGI_APPLICATION = 'app.asgi.application'
 
 
 # Database
@@ -104,6 +102,12 @@ DATABASES = {
     }
 }
 
+# channel layer in memory
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

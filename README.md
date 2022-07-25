@@ -21,7 +21,7 @@ para o uso é necessário:
 - [x] docker-compose configurando e orquestrando dockers de dependencias
 - [x] instalando plugins do vscode para ajudar no desenvolviemnto
 - [x] instalação do Django e suas dependencias
-- [x] instalando e configurando rest_framework e suas atributos
+- [x] instalando e configurando rest_framework e suas configurações
 - [x] 
 
 ## Ajudas e curiosidades

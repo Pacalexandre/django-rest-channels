@@ -15,9 +15,17 @@
 <body>
   <div class="container">
     <div class="md-8 mt-5">
-      <h1>{{text}}</h1>
+      <h1>Informação de processos</h1>
+      <p id="app"></p>
     </div>
   </div>
 </body>
+<script>
+  var socket = new WebSocket('ws://localhost:8000/ws/tela/');
+  socket.onmessage = function (event) {
+    var data = JSON.parse(event.data);
+    document.querySelector('#app').innerText = data.processo;
+  }
+</script>
 
 </html>
