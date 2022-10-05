@@ -2,7 +2,6 @@
 ![](app/static/rest-framework.png)
 Vamos montar uma aplicação que utiliza um api rest e devolve informações via websocket utilizando channels django django-rest-framework, montado em devcontainer com Python3.10 um app web que recebe atualizacoes da api rest via html e chamadas via backend rest
 
-configurando autenticacao git 
 para o uso é necessário:  
 - [x] pré requisitos
     - [x] docker - Docker version 20.10.8, build 3967b7d
